@@ -1,0 +1,37 @@
+import type { ReactNode } from 'react';
+
+export const metadata = {
+  title: 'khwaishein',
+  description: 'Something amazing is on the way',
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <head>
+        <style>{`
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+          
+          body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+              'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+              sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: white;
+            min-height: 100vh;
+          }
+        `}</style>
+      </head>
+      <body>{children}</body>
+    </html>
+  );
+}
